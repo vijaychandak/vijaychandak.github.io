@@ -1,35 +1,30 @@
 <html>
   <body>
-     <script type='text/javascript'>
-            
-    function initEmbeddedMessaging() {
-        try {
-            embeddedservice_bootstrap.settings.language = 'en_US'; 
-            embeddedservice_bootstrap.settings.smallCompanyLogoImgURL='https://customercare-mastercard--qa.sandbox.my.salesforce.com/servlet/servlet.ImageServer?id=0153u000002Edra&oid=00DR0000002JkCI&lastMod=1685629427000';
-            window.addEventListener("onEmbeddedMessagingReady", () => {
+
+    <script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+      window.addEventListener("onEmbeddedMessagingReady", () => {
                 embeddedservice_bootstrap.prechatAPI.setHiddenPrechatFields({
                    "messagingPayload":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9",
                    "messagingPayload1":"eyJmTmFtZSI6IlZpamF5IiwibE5hbWUiOiJDaGFuZGFrIiwiZW1haWwiOiJ2aWpheS5jaGFuZGFrQG1hc3RlcmNhcmQuY29tIiwibWNjSWQiOiJzMTIzNDU2IiwidW5pcXVlSWQiOiIxMjMtNDU2LTc4OTAiLCJjb21wYW55SWQiOiIxMDkxMDYifQ",
                    "messagingPayload2":"ah-2jleCreituk3WRs3BMExIJx4kXiDCiwZzCZBG96U"
                 });
             });
-       
-            embeddedservice_bootstrap.init(
-                '00DWG0000014p8F',
-                'Service_Cloud_Global_Connect_POC',
-                'https://customercare-mastercard--devsandbox.sandbox.my.site.com/ESWServiceCloudGlobalC1728904854371',
-                {
-                    scrt2URL: 'https://customercare-mastercard--devsandbox.sandbox.my.salesforce-scrt.com'
-                }
-            );
-            
-
-        } catch (err) {
-            console.error('Error loading Embedded Messaging: ', err);
-        }
-    };
+			embeddedservice_bootstrap.init(
+				'00DWG0000014p8F',
+				'Service_Cloud_Global_Connect_POC',
+				'https://customercare-mastercard--devsandbox.sandbox.my.site.com/ESWServiceCloudGlobalC1728904854371',
+				{
+					scrt2URL: 'https://customercare-mastercard--devsandbox.sandbox.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
 </script>
 <script type='text/javascript' src='https://customercare-mastercard--devsandbox.sandbox.my.site.com/ESWServiceCloudGlobalC1728904854371/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-
   </body>
 </html>
