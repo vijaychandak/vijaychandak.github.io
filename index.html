@@ -62,19 +62,19 @@
 		   "messagingPayload9":""
                 });
             });
-			embeddedservice_bootstrap.init(
-				'00DWG0000014p8F',
-				'Service_Cloud_Global_Connect_POC',
-				'https://customercare-mastercard--devsandbox.sandbox.my.site.com/ESWServiceCloudGlobalC1728904854371',
-				{
-					scrt2URL: 'https://customercare-mastercard--devsandbox.sandbox.my.salesforce-scrt.com'
-				}
-			);
+			 embeddedservice_bootstrap.init(
+                '00DDD000000Gpvj',
+                'Service_Cloud_Global_Connect_POC',
+                'https://customercare-mastercard--stage.sandbox.my.site.com/ESWServiceCloudGlobalC1735901471355',
+                {
+                    scrt2URL: 'https://customercare-mastercard--stage.sandbox.my.salesforce-scrt.com'
+                }
+            );
 		} catch (err) {
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
 </script>
-<script type='text/javascript' src='https://customercare-mastercard--devsandbox.sandbox.my.site.com/ESWServiceCloudGlobalC1728904854371/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+<script type='text/javascript' src="https://customercare-mastercard--stage.sandbox.my.site.com/ESWServiceCloudGlobalC1735901471355/assets/js/bootstrap.min.js" onload='initEmbeddedMessaging()'></script>
   </body>
 </html>
